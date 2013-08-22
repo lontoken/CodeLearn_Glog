@@ -1,6 +1,7 @@
 #include <iostream>
 #include <windows.h>
 
+//如果已经定义了 ERROR 宏，则需要在添加glog/logging.h之前定义GLOG_NO_ABBREVIATED_SEVERITIES宏
 #define GLOG_NO_ABBREVIATED_SEVERITIES
 
 #include <iostream>
@@ -16,10 +17,13 @@ int main(int argc, char **argv)
 
     FLAGS_log_dir = "./";
     FLAGS_logbuflevel = 2;
-    //FLAGS_minloglevel = 2;
+    FLAGS_minloglevel = 5;
     FLAGS_max_log_size = 1;
 
+
     google::GetLoggingDirectories();
+
+    //初始化glog库
     google::InitGoogleLogging("");
 
     //google::SetLogDestination(google::GLOG_INFO, "");

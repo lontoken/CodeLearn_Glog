@@ -33,16 +33,16 @@
 //
 // Author: Ray Sidney and many others
 //
-// Defines the VLOG_IS_ON macro that controls the variable-verbosity
+// Defines the VLOG_IS_ON macro that controls the variable变量-verbosity冗长
 // conditional logging.
 //
 // It's used by VLOG and VLOG_IF in logging.h
-// and by RAW_VLOG in raw_logging.h to trigger the logging.
+// and by RAW_VLOG in raw_logging.h to trigger触发 the logging.
 //
 // It can also be used directly e.g. like this:
 //   if (VLOG_IS_ON(2)) {
 //     // do some logging preparation and logging
-//     // that can't be accomplished e.g. via just VLOG(2) << ...;
+//     // that can't be accomplished完成 e.g. via just VLOG(2) << ...;
 //   }
 //
 // The truth value that VLOG_IS_ON(level) returns is determined by 

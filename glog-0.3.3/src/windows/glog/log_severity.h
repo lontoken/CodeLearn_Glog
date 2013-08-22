@@ -34,7 +34,7 @@
 #ifndef BASE_LOG_SEVERITY_H__
 #define BASE_LOG_SEVERITY_H__
 
-// Annoying stuff for windows -- makes sure clients can import these functions
+// Annoying讨厌的 stuff东西 for windows -- makes sure clients can import these functions
 #ifndef GOOGLE_GLOG_DLL_DECL
 # if defined(_WIN32) && !defined(__CYGWIN__)
 #   define GOOGLE_GLOG_DLL_DECL  __declspec(dllimport)
@@ -50,6 +50,7 @@ typedef int LogSeverity;
 
 const int GLOG_INFO = 0, GLOG_WARNING = 1, GLOG_ERROR = 2, GLOG_FATAL = 3,
   NUM_SEVERITIES = 4;
+// ABBREVIATED 简短的
 #ifndef GLOG_NO_ABBREVIATED_SEVERITIES
 # ifdef ERROR
 #  error ERROR macro is defined. Define GLOG_NO_ABBREVIATED_SEVERITIES before including logging.h. See the document for detail.
@@ -79,7 +80,7 @@ extern GOOGLE_GLOG_DLL_DECL const char* const LogSeverityNames[NUM_SEVERITIES];
 // IF_DEBUG_MODE is for small !NDEBUG uses like
 //   IF_DEBUG_MODE( string error; )
 //   DCHECK(Foo(&error)) << error;
-// instead of substantially more verbose
+// instead of substantially实质的 more verbose冗长的
 //   #ifndef NDEBUG
 //     string error;
 //     DCHECK(Foo(&error)) << error;

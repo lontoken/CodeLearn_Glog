@@ -508,7 +508,7 @@ class LogSink;  // defined below
 
 // If a non-NULL sink pointer is given, we push this message to that sink.
 // For LOG_TO_SINK we then do normal LOG(severity) logging as well.
-// This is useful for capturing messages and passing/storing them
+// This is useful for capturing捕捉 messages and passing/storing them
 // somewhere more specific than the global log of the process.
 // Argument论证 types:
 //   LogSink* sink;
@@ -560,8 +560,8 @@ class LogSink;  // defined below
   SYSLOG_IF(FATAL, !(condition)) << "Assert failed: " #condition
 
 // CHECK dies消失 with a fatal error if condition is not true.  It is *not*
-// controlled by NDEBUG, so the check will be executed regardless of
-// compilation mode.  Therefore, it is safe to do things like:
+// controlled受控制 by NDEBUG, so the check will be executed regardless of
+// compilation编辑 mode.  Therefore, it is safe to do things like:
 //    CHECK(fp->Write(x) == 4)
 #define CHECK(condition)  \
       LOG_IF(FATAL, GOOGLE_PREDICT_BRANCH_NOT_TAKEN(!(condition))) \
@@ -580,7 +580,7 @@ struct CheckOpString {
 };
 
 // Function is overloaded for integral完整的 types to allow static const
-// integrals declared in classes and not defined to be used as arguments to
+// integrals declared声明的 in classes and not defined to be used as arguments to
 // CHECK* macros. It's not encouraged受到鼓舞的 though.
 template <class T>      //..g template <class T>的作用范围
 inline const T&       GetReferenceableValue(const T&           t) { return t; }
