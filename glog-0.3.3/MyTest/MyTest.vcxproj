@@ -94,6 +94,11 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\vsprojects\libglog\libglog.vcxproj">
+      <Project>{34bd04bd-bc1d-4bfc-aafc-ed02d9e960f1}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

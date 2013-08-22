@@ -14,6 +14,11 @@ int main(int argc, char **argv)
     std::cout << argv[0] << std::endl;
     //std::cout << argv[1] << std::endl;
 
+    FLAGS_log_dir = "./";
+    FLAGS_logbuflevel = 2;
+    //FLAGS_minloglevel = 2;
+    FLAGS_max_log_size = 1;
+
     google::GetLoggingDirectories();
     google::InitGoogleLogging("");
 
@@ -34,6 +39,13 @@ int main(int argc, char **argv)
 
   LOG(WARNING) << "WARNING This should work";
   LOG_IF(WARNING, 3 > 2) << "WARNING This should be also OK";
+
+  int idx;
+  for(idx = 0; idx < 100000; ++idx){
+      LOG(INFO) << "idx=" << idx;
+  }
+
+  std::cout << idx;
 
   int i;
   std::cin >> i;

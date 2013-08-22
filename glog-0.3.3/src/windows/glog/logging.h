@@ -113,7 +113,7 @@ typedef unsigned __int64 uint64;
 }
 
 // The global value of GOOGLE_STRIP_LOG. All the messages logged to
-// LOG(XXX) with severity less than GOOGLE_STRIP_LOG will not be displayed.
+// LOG(XXX) with severity严重级别 less than GOOGLE_STRIP_LOG will not be displayed.
 // If it can be determined决定了的 at compile time that the message will not be
 // printed, the statement will be compiled out.
 //
@@ -125,9 +125,9 @@ typedef unsigned __int64 uint64;
 #define GOOGLE_STRIP_LOG 0
 #endif
 
-// GCC can be told that a certain branch is not likely to be taken (for
+// GCC can be told that a certain branch分支 is not likely to be taken (for
 // instance, a CHECK failure), and use that information in static analysis.
-// Giving it this information can help it optimize for the common case in
+// Giving it this information can help it optimize优化 for the common case in
 // the absence of better information (ie. -fprofile-arcs).
 //
 #ifndef GOOGLE_PREDICT_BRANCH_NOT_TAKEN
@@ -363,6 +363,7 @@ DECLARE_int32(max_log_size);
 // Sets whether to avoid logging to the disk if the disk is full.
 DECLARE_bool(stop_logging_if_full_disk);
 
+//这些宏被使用之后，就丢弃...
 #ifdef MUST_UNDEF_GFLAGS_DECLARE_MACROS
 #undef MUST_UNDEF_GFLAGS_DECLARE_MACROS
 #undef DECLARE_VARIABLE
